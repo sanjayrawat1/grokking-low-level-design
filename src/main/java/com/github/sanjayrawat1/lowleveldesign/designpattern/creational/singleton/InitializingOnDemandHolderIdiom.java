@@ -1,0 +1,20 @@
+package com.github.sanjayrawat1.lowleveldesign.designpattern.creational.singleton;
+
+/**
+ * Bill Pugh Singleton pattern.
+ *
+ * @author Sanjay Singh Rawat
+ */
+public final class InitializingOnDemandHolderIdiom {
+
+    private InitializingOnDemandHolderIdiom() {}
+
+    public static InitializingOnDemandHolderIdiom getInstance() {
+        return HelperHolder.INSTANCE;
+    }
+
+    private static class HelperHolder {
+
+        private static final InitializingOnDemandHolderIdiom INSTANCE = new InitializingOnDemandHolderIdiom();
+    }
+}
